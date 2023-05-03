@@ -120,7 +120,7 @@
             Universe: 'Marvel',
         }
         let heroMarvel4 = {
-            Alias: 'Spiderman',
+            Alias: 'Spiderman2',
             RealName: 'Peter Parker',
             Power: 'Une araignée humaine',
             Universe: 'Marvel',
@@ -136,17 +136,23 @@
         }
         console.log('---')
 
-        let herosDatabase = [[heroDC1,heroDC2,heroDC3,heroDC4],[heroMarvel1,heroMarvel2,heroMarvel3,heroMarvel4]]
+        let herosDatabase = [heroDC1,heroDC2,heroDC3,heroDC4,heroMarvel1,heroMarvel2,heroMarvel3,heroMarvel4]
         console.log(herosDatabase.length)
-        for(let i = 0; i< herosDatabase.length; i++){
-            for(let j = 0; j<herosDatabase[i].length; j++){
-                console.log(i+'.'+j)
-                for (const prop2 in herosDatabase[i][j]){
-                    
-                    console.log(`${prop2} : ${herosDatabase[i][j][prop2]}`)
-                }
-            }
-        }
+        // for(let i = 0; i< herosDatabase.length; i++){
+        //     for(let j = 0; j<herosDatabase[i].length; j++){
+        //         console.log(i+'.'+j)
+        //         for (const prop2 in herosDatabase[i][j]){
+        //             console.log(`${prop2} : ${herosDatabase[i][j][prop2]}`)
+        //         }
+        //     }
+        // }
+        herosDatabase.forEach(hero => {
+            console.log("Hero: "+hero.Alias)
+            console.log("Ident: "+hero.RealName)
+            console.log("Power: "+hero.Power)
+            console.log("Universe: "+hero.Universe)
+            console.log("---")
+        })
     </script>
 </body>
 
