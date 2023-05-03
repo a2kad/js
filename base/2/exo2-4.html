@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <h1>Exo-4</h1>
+    <script>
+        var sex = prompt('Quel est votre genre ? (femme ou homme)').toLowerCase()
+        var age = prompt('Votre âge')
+        if (sex == 'homme' && age >= 18) {
+            console.log(`L'utilisateur est de type masculin et majeur`)
+        }
+        else if (sex == 'homme' && age < 18) {
+            console.log(`L'utilisateur est de type masculin et mineur`)
+        }
+        else if (sex == 'femme' && age >= 18) {
+            console.log(`L'utilisatrice est de type féminin et majeure`)
+        }
+        else if (sex == 'femme' && age < 18) {
+            console.log(`L'utilisatrice est de type féminin et mineure`)
+        }
+        else {
+            console.log(`Error !`)
+        }
+    </script>
+</body>
+
+</html>

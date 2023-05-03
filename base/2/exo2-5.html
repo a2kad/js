@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1>Exo-5</h1>
+    <script>
+        var average = prompt(`Rentrer la moyenne sur 20 d'un stagiaire de l'Afpa :`)
+        if (average == 0) {
+            console.log('Un rendez-vous sera programmé en raison de la moyenne.')
+        }
+        else if (average >= 1 && average <=5) {
+            console.log('Trimestre insuffisant.')
+        }
+        else if (average >= 6 && average <=10) {
+            console.log('Trimestre moyen.')
+        }
+        else if (average >= 11 && average <=13) {
+            console.log('Bon trimestre.')
+        }
+        else if (average >= 14 && average <=18) {
+            console.log('Excellent trimestre.')
+        }
+        else if (average > 18 && average <=20) {
+            console.log('Félicitations.')
+        }
+        else {
+            console.log('Error !')
+        }
+    </script>
+</body>
+</html>

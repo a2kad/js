@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <script>
+        // Exercice 1
+
+        /* let mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre' , 'décembre']
+        let mois2 = new Array('janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre' , 'décembre')
+        for(let i=0; i< mois.length; i++){
+            console.log(mois[i])
+        } */
+
+        //Exercice 2 et 3
+
+        /* let days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi' , 'dimanche']
+        console.log(days[4])
+        console.log(days[5])
+        console.log(days.length) */
+
+        //Exercice 4
+
+        /* let mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+        for (let i = 0; i < mois.length; i++) {
+            console.log((i + 1) + ' - ' + mois[i])
+        } */
+
+        //Exercice 5
+
+        // let frenchMonth = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre' , 'Décembre']
+        // let frenchDays = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' , 'Dimanche']
+        // let englishMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        // let englishDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+        // let superArr = [[frenchMonth, frenchDays], [englishMonth, englishDays]]
+        // console.log('--=1=--')
+        // console.log(superArr[0][0][10])
+        // console.log('--=2=--')
+        // console.log(superArr[1][1][4])
+        // console.log('--=3=--')
+        // for (let i = 0; i < superArr[1][0].length; i++){
+        //     console.log(superArr[1][0][i])
+        // }
+        // console.log('--=4=--')
+        // for (let i = 0; i < superArr[0][1].length; i++){
+        //     console.log(superArr[0][1][i])
+        // }
+
+        //Exercice 6
+
+        // let princesses = ['Cendrillon', 'Mulan', 'Peach', 'Raiponce', 'Belle', 'Vaiana', 'Daisy', 'Jasmine']
+
+        // for (let i = 0; i < princesses.length; i++) {
+        //     console.log(princesses[i])
+        // }
+        // princesses.splice(2, 1)
+        // princesses.splice(5, 1)
+        // console.log('---')
+        // for (let i = 0; i < princesses.length; i++) {
+        //     console.log(princesses[i])
+        // }
+        // console.log('---')
+        // princesses.sort()
+
+        // for (let i = 0; i < princesses.length; i++) {
+        //     console.log(princesses[i])
+        // }
+        // console.log('---')
+        // console.log('Il y a ' + princesses.length + ' princesses dans le tableau.')
+
+        //Exercice 7
+
+        let heroDC1 = {
+            Alias: 'Superman',
+            RealName: 'Clark Kent',
+            Power: 'Très fort et qui vole très haut',
+            Universe: 'DC',
+        }
+        let heroDC2 = {
+            Alias: 'Cyborg',
+            RealName: 'Victor Stone',
+            Power: 'Résistance et intelligence surhumaines',
+            Universe: 'DC',
+        }
+        let heroDC3 = {
+            Alias: 'Zsasz',
+            RealName: 'Victor Zsasz',
+            Power: 'Extrêmement rusé',
+            Universe: 'DC',
+        }
+        let heroDC4 = {
+            Alias: 'Flamebird',
+            RealName: 'Betty Kane',
+            Power: 'Très fort et qui vole très haut',
+            Universe: 'DC',
+        }
+        let heroMarvel1 = {
+            Alias: 'Spiderman',
+            RealName: 'Peter Parker',
+            Power: 'Une araignée humaine',
+            Universe: 'Marvel',
+        }
+        let heroMarvel2 = {
+            Alias: 'Mayday',
+            RealName: 'Petra Parker',
+            Power: 'Peut s\'accrocher sur n\'importe quelle surface',
+            Universe: 'Marvel',
+        }
+        let heroMarvel3 = {
+            Alias: 'Spiderman',
+            RealName: 'Peter Parker',
+            Power: 'Une araignée humaine',
+            Universe: 'Marvel',
+        }
+        let heroMarvel4 = {
+            Alias: 'Spiderman',
+            RealName: 'Peter Parker',
+            Power: 'Une araignée humaine',
+            Universe: 'Marvel',
+        }
+        for(const prop in heroDC1){
+            console.log(prop)
+        }
+
+        console.log('---')
+
+        for(const prop in heroDC1){
+            console.log(`${prop} : ${heroDC1[prop]}`)
+        }
+        console.log('---')
+
+        let herosDatabase = [[heroDC1,heroDC2,heroDC3,heroDC4],[heroMarvel1,heroMarvel2,heroMarvel3,heroMarvel4]]
+        console.log(herosDatabase.length)
+        for(let i = 0; i< herosDatabase.length; i++){
+            for(let j = 0; j<herosDatabase[i].length; j++){
+                console.log(i+'.'+j)
+                for (const prop2 in herosDatabase[i][j]){
+                    
+                    console.log(`${prop2} : ${herosDatabase[i][j][prop2]}`)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
