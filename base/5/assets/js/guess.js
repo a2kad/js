@@ -1,24 +1,27 @@
-let inputNumber = document.getElementById('inputNumber')
-
 let infoField = document.getElementById('infoField')
 
 let buttonPlay = document.getElementById('buttonPlay')
 
-guessNumber = 13
+function infoWrite() {
+    //infoField.innerText = 'GO !'
+    guessNumber = 13
 
-function infoWrite(inputNumber) {
-    infoField.innerText('GO !')
-    if (guessNumber < 0 || guessNumber > 20) {
-        infoField.innerText('Enter the number between 0 and 20')
+    let inputNumber = document.getElementById('inputNumber').value
+    console.log(inputNumber)
+    if (inputNumber < 0 || inputNumber > 20) {
+        infoField.innerText = "Enter the number between 0 and 20"
     } else if (inputNumber > guessNumber) {
-        infoField.innerText('Less')
+        infoField.innerText = "Less"
     } else if (inputNumber < guessNumber) {
-        infoField.innerText('More')
-    } else if (inputNumber > guessNumber) {
-        infoField.innerHTML('<img src="assets/img/bingo.png">')
+        infoField.innerText = "More"
+    } else if (inputNumber == guessNumber) {
+        infoField.innerHTML = "<img src=\"assets/img/bingo.png\" style=\"width:200px;\">"
+    } else {
+        infoField.innerText = "Enter the number between 0 and 20"
     }
 }
 
-buttonPlay.addEventListener('click', function(){
-    infoWrite(inputNumber)
+buttonPlay.addEventListener('click', function () {
+    console.log('ok')
+    infoWrite()
 })
