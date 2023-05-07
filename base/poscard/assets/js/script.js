@@ -6,6 +6,10 @@ let inputCampagne = document.getElementById('inputCampagne')
 let inputVerdana = document.getElementById('inputVerdana')
 let inputQuattrocento = document.getElementById('inputQuattrocento')
 let inputPinyonScript = document.getElementById('inputPinyonScript')
+let inputColor = document.getElementById('inputColor')
+let postCardText = document.getElementById('postCardText')
+let inputStyle = document.getElementById('inputStyle')
+let print = document.getElementById('print')
 
 function insertTitle(title) {
     let postCardTitle = document.getElementById('postCardTitle')
@@ -80,4 +84,40 @@ inputQuattrocento.addEventListener('click', function(){
 inputPinyonScript.addEventListener('click', function(){
     let fontA = 'PinyonScript'
     changeFont(fontA)
+})
+
+function changeColor(color){
+    console.log('ins'+color)
+    postCardText.style.color = color
+}
+
+inputColor.addEventListener('click', function(){
+    let color = inputColor.value
+    console.log(color)
+    changeColor(color)
+})
+
+function changeStyle (style) {
+    if (style=='normal'){
+        postCardText.style.fontWeight = 'normal'
+        postCardText.style.fontStyle = 'normal'
+    }else if(style=='italic'){
+        postCardText.style.fontWeight = 'normal'
+        postCardText.style.fontStyle = 'italic'
+    }else if (style=='bold'){
+        postCardText.style.fontWeight = 'bold'
+    }
+}
+
+inputStyle.addEventListener('click', function(){
+    let style = inputStyle.value
+    changeStyle(style)
+})
+
+function printPostCard(){
+    window.print()
+}
+
+print.addEventListener('click', function(){
+    printPostCard()
 })

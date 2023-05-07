@@ -14,13 +14,13 @@
 <body>
     <div class="container">
         <div class="row ">
-            <div class="col-sm-7 bg-danger-subtle align-self-center text-center ">
+            <div class="col-sm-7 align-self-center text-center printThis">
                 <div class="py-5"><h1 id="postCardTitle">Le Havre City</h1></div>
                 <div id="postCardImage"><img src="assets/img/sea.jpg" class="img-fluid" alt="Mer"></div>
                 <div id="postCardText" class="py-3">C'est la meilleure ville sur terre!</div>
             </div>
             <span class="d-block d-sm-none border-bottom border-dark"></span>
-            <div class="col-sm-5 bg-success-subtle">
+            <div class="col-sm-5 px-3 nonPrint">
                 <div class="my-2">
                     <label for="inputTitle" class="form-label">Veuillez saisir un titre :</label>
                     <input type="text" class="form-control" id="inputTitle" placeholder="Le Havre City">
@@ -52,13 +52,13 @@
                 <input type="color" class="form-control form-control-color" id="inputColor" value="#563d7c"
                     title="Choose your color">
                 <div class="my-2">Veuillez choisir un style pour votre texte :</div>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" id="inputStyle">
                     <option selected>Choisissez un style</option>
                     <option value="normal">Normal</option>
                     <option value="bold">Bold</option>
                     <option value="italic">Italic</option>
                 </select>
-                <button type="button" class="btn btn-danger my-3">Imprimer</button>
+                <button type="button" id="print" class="btn btn-danger my-3">Imprimer</button>
             </div>
         </div>
     </div>
