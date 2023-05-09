@@ -93,7 +93,7 @@ function changeColor(color){
     postCardText.style.color = color
 }
 
-inputColor.addEventListener('click', function(){
+inputColor.addEventListener('change', function(){
     let color = inputColor.value
     console.log(color)
     changeColor(color)
