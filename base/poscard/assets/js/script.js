@@ -66,10 +66,12 @@ function changeFont (font){
         console.log('Quattrocento')
         // postCardTitle.style.fontFamily = "Roboto"
         postCardText.style.fontFamily = "Quattrocento"
+        postCardText.style.fontSize = "24px"
     }else if (font=='PinyonScript'){
         console.log('PinyonScript')
         // postCardTitle.style.fontFamily = "Arial"
         postCardText.style.fontFamily = "Pinyon Script"
+        postCardText.style.fontSize = "36px"
     }
     
 }
