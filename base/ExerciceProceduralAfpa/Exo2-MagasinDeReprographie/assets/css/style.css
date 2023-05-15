@@ -1,0 +1,15 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+}
+.resultatField{
+    font-size: 56px;
+    font-weight: bold;
+}
