@@ -32,5 +32,13 @@ inputNumber.addEventListener('input', function () {
         res20.innerHTML = ` : 1.80 &euro;`
         num30.innerHTML = `${inputNumberValue-30} x 0.08 &euro;`
         res30.innerHTML = ` : ${(prix-2.8).toFixed(2)} &euro;`
+    }else if (inputNumberValue <= 0 ) {
+        resultatField.innerText = '0 €'
+        num10.innerHTML = `0 x 0.10 &euro;`
+        res10.innerHTML = ` : 0 &euro;`
+        num20.innerHTML = `0 x 0.09 &euro;`
+        res20.innerHTML = ` : 0 &euro;`
+        num30.innerHTML = `0 x 0.08 &euro;`
+        res30.innerHTML = ` : 0 &euro;`
     }
 })
