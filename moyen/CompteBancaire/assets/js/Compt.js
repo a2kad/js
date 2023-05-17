@@ -1,11 +1,11 @@
 class Compt {
     /**
      * Création du compte
-     * @param {string} name - Prenom
+     * @param {string} name - Prénom
      * @param {string} surname - Nom
-     * @param {date} dateOfBirth - Date de nissance
+     * @param {date} dateOfBirth - Date de naissance
      * @param {number} balance - Solde
-     * @param {string} accountNumber - Noumero de compt
+     * @param {string} accountNumber - Numéro de compt
      */
     constructor(name, surname, dateOfBirth, balance, accountNumber){
         this.name = name, 
