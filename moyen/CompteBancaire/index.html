@@ -13,12 +13,16 @@
 <body>
     <div class="container">
         <h1>Clients bancaires</h1>
+        <div id="bal"></div>
+        <button type="button" class="btn btn-secondary btn-sm" id="btnMinus">-</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="btnPlus">+</button>
         <table class="table table-hover">
             <thead class="table-dark">
                 <tr>
                     <th>Numéro de compte</th>
                     <th>Nom de famille</th>
-                    <th></th>
+                    <th>Solde</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody id="clientTable" class="clientTable">

@@ -1,10 +1,11 @@
-const accountNumber = document.getElementById('accountNumber')
-const surname = document.getElementById('surname')
+const btnMinus = document.getElementById('btnMinus')
+const btnPlus = document.getElementById('btnPlus')
 const showAll = document.getElementById('showAll')
 const clientTable = document.getElementById('clientTable')
+const bal = document.getElementById('bal')
 
 
-let objectsNames = ''
+// let objectsNames = ''
 let oName = ''
 let oSurname = ''
 let oDate = ''
@@ -20,19 +21,26 @@ var options = {
 for (let i = 0; i <= 9; i++) {
     oName = 'Name' + i
     oSurname = 'Surname' + i
-    oDate = new Date(1990, i, 10+i)
-    oBalance = 1000 * (i+1)
+    oDate = new Date(1990, i, 10 + i)
+    oBalance = 1000 * (i + 1)
     oNum = 'NUM0000' + i
     let objectsNames = new Compt(oName, oSurname, oDate, oBalance, oNum)
     baseClient.push(objectsNames)
     console.log(objectsNames)
+
 }
+
+
 baseClient.forEach(element => {
     console.log(element.accountNumber)
     clientTable.innerHTML += `
         <tr>
-            <td id="accountNumber">${element.accountNumber}</td>
-            <td id="surname">${element.surname}</td>
+            <td>${element.accountNumber}</td>
+            <td>${element.surname}</td>
+            <td>${element.balance} &euro;&nbsp;
+            <button type="button" class="btn btn-secondary btn-sm" id="btnMinus" >-</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnPlus"  >+</button>
+            </td>
             <td id="showAll" class="showAll text-end">
 
             <div class="dropdown">
@@ -52,6 +60,8 @@ baseClient.forEach(element => {
                     <p class="mb-0">
                     <b>Solde : </b>
                     ${element.balance} &euro;
+                    <button type="button" class="btn btn-secondary btn-sm" id="btnMinus">-</button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="btnPlus">+</button>
                     </p>
                     <p class="mb-0">
                     <b>Numéro de compt : </b>
@@ -64,4 +74,18 @@ baseClient.forEach(element => {
             
         </tr>
     `
+    
 });
+
+bal.innerText = oBalance
+
+btnMinus.addEventListener('click', function () {
+    console.log('minus')
+    oBalance -= 10
+    bal.innerText = oBalance
+})
+btnPlus.addEventListener('click', function () {
+    console.log('plus')
+    oBalance += 10
+    bal.innerText = oBalance
+})
