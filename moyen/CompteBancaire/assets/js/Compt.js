@@ -17,18 +17,22 @@ class Compt {
     /**
      * Créditer le compte
      */
-    add(balance) {
-        this.balance = balance + 10
+    add(balance,accN) {
         console.log('Créditer le compte +10')
-        return balance
+        this.accN = accN
+        this.balance = balance
+        balance += 10
+        return `bal${accN}.innerHTML = '${balance} &euro;'`
     }
     /**
      * Débiter le compte
      */
-    remouve() {
-        this.balance = balance - 10
+    remouve(balance, accN) {
         console.log('Débiter le compte -10')
-        return balance
+        this.accN = accN
+        this.balance = balance
+        balance -= 10
+        return `bal${accN}.innerHTML = '${balance} &euro;'`
     }
     /**
      * Affiche les infos

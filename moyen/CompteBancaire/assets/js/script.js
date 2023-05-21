@@ -37,12 +37,12 @@ baseClient.forEach(element => {
         <tr>
             <td>${element.accountNumber}</td>
             <td>${element.surname}</td>
-            <td>${element.balance} &euro;&nbsp;
-            <button type="button" class="btn btn-secondary btn-sm" id="btnMinus" >-</button>
-            <button type="button" class="btn btn-secondary btn-sm" id="btnPlus"  >+</button>
+            <td id="bal${element.accountNumber}">${element.balance} &euro;&nbsp;
+            
             </td>
-            <td id="showAll" class="showAll text-end">
-
+            <td id="showAll" class="">
+            <button type="button" class=" btn btn-secondary btn-sm" id="btnMinus" onclick="${element.remouve(element.balance, element.accountNumber)}" >-</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnPlus" onclick="${element.add(element.balance, element.accountNumber)}"  >+</button>
             <div class="dropdown">
                 <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Plus d'info
@@ -60,8 +60,6 @@ baseClient.forEach(element => {
                     <p class="mb-0">
                     <b>Solde : </b>
                     ${element.balance} &euro;
-                    <button type="button" class="btn btn-secondary btn-sm" id="btnMinus">-</button>
-                    <button type="button" class="btn btn-secondary btn-sm" id="btnPlus">+</button>
                     </p>
                     <p class="mb-0">
                     <b>Numéro de compt : </b>
@@ -69,13 +67,12 @@ baseClient.forEach(element => {
                     </p>
                 </div>
             </div>
-            
             </td>
-            
         </tr>
     `
-    
 });
+
+
 
 bal.innerText = oBalance
 
