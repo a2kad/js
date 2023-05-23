@@ -1,3 +1,7 @@
-.clientTable{
-    min-height: 100vh;
+.showAllTh{
+    text-align: center; 
+    width: 290px;
+}
+.dropdown-menu.dropdown-menu-end.p-4.text-body-secondary {
+    width: 400px;
 }
