@@ -16,14 +16,13 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
 
         showFilms.innerHTML = `<div class="alert alert-light" role="alert">
         Nouveaux Films
-      </div>`
+        </div>`
         response.results.forEach(element => {
             console.log(element)
             showFilms.innerHTML += `
                 <div class="col">
                 <div class="card m-1" style="width: 18rem;">
-                    <img src="https://image.tmdb.org/t/p/original/${element.poster_path}" class="card-img-top"
-                        alt="${element.original_title}">
+                ${testPoster(element.poster_path)}
                     <div class="card-body">
                         <h5>${element.original_title}</h5>
                         <p class="card-text">${element.release_date.slice(0, 4)}</p>
@@ -70,8 +69,7 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                         showFilms.innerHTML += `
                 <div class="col">
                 <div class="card m-1" style="width: 18rem;">
-                    <img src="https://image.tmdb.org/t/p/original/${element.poster_path}" class="card-img-top"
-                        alt="${element.original_title}">
+                    ${testPoster(element.poster_path)}
                     <div class="card-body">
                         <h5>${element.original_title}</h5>
                         <p class="card-text">${element.release_date.slice(0, 4)}</p>
@@ -147,3 +145,11 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
             }
         }
     },)
+
+    function testPoster(poster){
+        if (poster == null){
+            return `<img src="assets/img/no-poster.jpg" class="card-img-top">`
+        }else{
+            return `<img src="https://image.tmdb.org/t/p/original/${poster}" class="card-img-top">`
+        }
+    }
