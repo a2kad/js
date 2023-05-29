@@ -13,7 +13,6 @@ const options = {
 fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
     .then(response => response.json())
     .then(response => {
-
         showFilms.innerHTML = `<div class="alert alert-light" role="alert">
         Nouveaux Films
         </div>`
@@ -37,17 +36,12 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                         
                     </div>
                 </div>
-            </div>
-                `
-
+            </div>`
         })
-        // .catch(err => console.error(err));
 
         searchBtn.addEventListener('click', () => {
             console.log(searchInput.value)
             let serchUrl = `https://api.themoviedb.org/3/search/movie?query=${searchInput.value}&include_adult=false&language=fr-FR&page=1`
-
-
 
             const options = {
                 method: 'GET',
@@ -84,15 +78,11 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                         
                     </div>
                 </div>
-            </div>
-                `
+            </div>`
                     });
                     console.log(response)
                 })
-
                 .catch(err => console.error(err))
-
-
         })
 
 
