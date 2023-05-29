@@ -19,8 +19,8 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
         response.results.forEach(element => {
             console.log(element)
             showFilms.innerHTML += `
-                <div class="col">
-                <div class="card m-1" style="width: 18rem;">
+                <div class="col text-center">
+                <div class="card mx-auto my-1" style="width: 18rem;">
                 ${testPoster(element.poster_path)}
                     <div class="card-body">
                         <h5>${element.original_title}</h5>
@@ -31,7 +31,7 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                             <div class="ratings">
                             ${rating(Math.round(element.popularity))}
                         </div>
-                        <p class="card-text">${Math.round(element.popularity)}/100</p>
+                        <p class="card-text">${Math.round(element.popularity)}</p>
                     </div>
                         
                     </div>
@@ -61,8 +61,8 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                     response.results.forEach(element => {
                         console.log(element)
                         showFilms.innerHTML += `
-                <div class="col">
-                <div class="card m-1" style="width: 18rem;">
+                <div class="col text-center">
+                <div class="card mx-auto my-1" style="width: 18rem;">
                     ${testPoster(element.poster_path)}
                     <div class="card-body">
                         <h5>${element.original_title}</h5>
@@ -84,7 +84,6 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                 })
                 .catch(err => console.error(err))
         })
-
 
         function rating(score) {
             let result = 0
