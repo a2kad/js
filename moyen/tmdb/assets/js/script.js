@@ -29,9 +29,12 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                         
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="ratings">
-                            ${rating(Math.round(element.popularity))}
+                            ${rating(element.vote_average)}
                         </div>
-                        <p class="card-text">${Math.round(element.popularity)}</p>
+                        <p class="card-text">
+                        
+                        ${element.vote_average}
+                        </p>
                     </div>
                         
                     </div>
@@ -71,9 +74,9 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
                         
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="ratings">
-                            ${rating(Math.round(element.popularity))}
+                            ${rating(element.vote_average)}
                         </div>
-                        <p class="card-text">${Math.round(element.popularity)}</p>
+                        <p class="card-text">${element.vote_average}</p>
                     </div>
                         
                     </div>
@@ -86,45 +89,35 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', op
         })
 
         function rating(score) {
-            let result = 0
-            if (score > 0 && score <= 100) {
-                result = score / 100
-            } else if (score > 100 && score <= 1000) {
-                result = score / 1000
-            } else if (score > 1000 && score <= 10000) {
-                result = score / 10000
-            } else {
-                result = 0
-            }
-            if (result >= 0 && result <= 0.2) {
+            if (score >= 0 && score <= 2) {
                 return `
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>`
-            } else if (result > 0.2 && result <= 0.4) {
+            } else if (score > 2 && score <= 4) {
                 return `
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>`
-            } else if (result > 0.4 && result <= 0.6) {
+            } else if (score > 4 && score <= 6) {
                 return `
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>`
-            } else if (result > 0.6 && result <= 0.8) {
+            } else if (score > 6 && score <= 8) {
                 return `
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star"></i>`
-            } else if (result > 0.8 && result <= 1) {
+            } else if (score > 8 && score <= 10) {
                 return `
             <i class="fa fa-star rating-color"></i>
             <i class="fa fa-star rating-color"></i>
