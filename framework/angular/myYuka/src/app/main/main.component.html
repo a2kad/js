@@ -21,7 +21,7 @@
                         <label for="InputCode" class="form-label">Entrez le code-barres du produit</label>
                         <input type="text" class="form-control" id="InputCode" pattern="[0-9]{4,13}"
                             [formControl]="productSearch">
-                        <div class="form-text">Maximum 13 chiffres</div>
+                        <div class="form-text">Maximum 13 chiffres. Par example : 3175680011480</div>
                     </div>
                     <a (click)="showProductInfo()" type="submit" class="btn btn-primary" >Rechercher</a>
                 </form>
@@ -39,7 +39,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Photo de product:</h5>
+                            <h5 class="card-title">Photo de product :</h5>
                             <img src="{{prodPhoto}}" class="img-fluid">
                         </div>
                     </div>
@@ -55,7 +55,8 @@
                 <div class="col-12">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Allergènes</h5>
+                            <h5 class="card-title">Allergènes :</h5>
+                            <p class="card-text">{{prodAllergen}}</p>
                         </div>
                     </div>
                 </div>
@@ -63,21 +64,24 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">NOVA</h5>
+                            <h5 class="card-title">NOVA :</h5>
+                            <p class="card-text">{{prodNova}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Nutri-Score</h5>
+                            <h5 class="card-title">Nutri-Score :</h5>
+                            {{prodNutriScore}}
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Huile de palme</h5>
+                            <h5 class="card-title">Huile de palme :</h5>
+                            <p class="card-text">{{prodPalme}}</p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +89,8 @@
                 <div class="col-12">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Magasins</h5>
+                            <h5 class="card-title">Magasins :</h5>
+                            <p class="card-text">{{stores}}</p>
                         </div>
                     </div>
                 </div>
