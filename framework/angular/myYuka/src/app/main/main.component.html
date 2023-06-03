@@ -14,7 +14,7 @@
 
 <main>
     <section class="py-5 text-center container">
-        <div class="row py-lg-2">
+        <div class="row py-lg-3">
             <div class="col-md-6 col-sm-12 mx-auto px-5 border-right-solid">
                 <form (ngSubmit)="onSubmit()">
                     <div class="mb-3  px-5">
@@ -92,9 +92,15 @@
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="card shadow-sm">
+
+                            <div class="row g-0  align-items-center">
+                                <div class="col-md-3"><img src="{{prodPalme}}" class="img-fluid m-2 imgPalm"></div>
+                                <div class="col-md-9">
                             <div class="card-body">
-                                <h5 class="card-title">Huile de palme :</h5>
-                                <p class="card-text">{{prodPalme}}</p>
+                                <h5 class="card-title">{{prodPalmeText}}</h5>
+                                
+                            </div>
+                            </div>
                             </div>
                         </div>
                     </div>

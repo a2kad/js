@@ -17,6 +17,8 @@ export class MainComponent {
   public prodNutriScoreIndex: string;
   public prodNutriScore: string;
   public prodPalme: string;
+  public prodPalmeIndex: string;
+  public prodPalmeText: string;
   public stores: string;
   public prodNovaIndex : string;
 
@@ -37,6 +39,8 @@ export class MainComponent {
     this.prodNutriScoreIndex = '';
     this.prodNutriScore = '';
     this.prodPalme = '';
+    this.prodPalmeIndex = '';
+    this.prodPalmeText = '';
     this.stores = '';
     this.prodNovaIndex = '';
   }
@@ -80,7 +84,14 @@ export class MainComponent {
           this.prodNutriScore = "../../assets/images/240px-Nutri-score-Inconnu.svg .png"
         }
 
-        this.prodPalme = data['product']['ingredients_from_palm_oil_n']
+        this.prodPalmeIndex = data['product']['ingredients_from_palm_oil_n']
+        if (this.prodPalmeIndex == '1'){
+          this.prodPalme = "../../assets/images/palm-oil.png"
+          this.prodPalmeText = 'Contient de l\'huile de palme'
+        } else{
+          this.prodPalme = "../../assets/images/palm-oil-free.png"
+          this.prodPalmeText = 'Ne contient pas d\'huile de palme'
+        }
         this.stores = data['product']['stores']
       });
   }
