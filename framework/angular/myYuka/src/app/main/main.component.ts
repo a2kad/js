@@ -21,6 +21,7 @@ export class MainComponent {
   public prodPalmeText: string;
   public stores: string;
   public prodNovaIndex : string;
+  public prodName : string;
 
   productSearch = new FormControl('');
 
@@ -43,12 +44,14 @@ export class MainComponent {
     this.prodPalmeText = '';
     this.stores = '';
     this.prodNovaIndex = '';
+    this.prodName = '';
   }
 
   public showProductInfo() {
     return this.http.get<any>("https://world.openfoodfacts.org/api/v0/product/" + this.productSearch.value) // 3017620422003  
       .subscribe((data) => {
         this.prodCode = data['code'],
+        this.prodName = data['product']['generic_name_fr'],
           this.prodIngredinetns = data['product']['ingredients_text_fr'],
           this.prodPhoto = data['product']['image_url'],
           this.prodAllergen = data['product']['allergens_from_ingredients'],
@@ -85,7 +88,7 @@ export class MainComponent {
         }
 
         this.prodPalmeIndex = data['product']['ingredients_from_palm_oil_n']
-        if (this.prodPalmeIndex == '1'){
+        if (this.prodPalmeIndex == '1' || this.prodPalmeIndex == '0' ){
           this.prodPalme = "../../assets/images/palm-oil.png"
           this.prodPalmeText = 'Contient de l\'huile de palme'
         } else{

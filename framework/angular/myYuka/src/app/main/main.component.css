@@ -1,3 +1,6 @@
+main{
+    min-height: 80vh;
+}
 .imgScan,.imgPalm {
     width: 100px;
 }
@@ -6,4 +9,7 @@
 }
 .imgNutri{
     width: 180px;
+}
+.footerDown{
+    height: 50px;
 }
