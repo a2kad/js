@@ -21,7 +21,7 @@
                         <label for="InputCode" class="form-label">Entrez le code-barres du produit</label>
                         <input type="text" class="form-control" id="InputCode" pattern="[0-9]{4,13}"
                             [formControl]="productSearch">
-                        <div class="form-text">Maximum 13 chiffres. Par example : 3175680011480</div>
+                        <div class="form-text">Maximum 13 chiffres. Par example : 3175680011480 ou 7613034626844</div>
                     </div>
                     <a (click)="submitted=true;showProductInfo()" type="submit" class="btn btn-primary">Rechercher</a>
                 </form>
