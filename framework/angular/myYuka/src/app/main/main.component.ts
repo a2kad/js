@@ -88,10 +88,14 @@ export class MainComponent {
         }
 
         this.prodPalmeIndex = data['product']['ingredients_from_palm_oil_n']
-        if (this.prodPalmeIndex == '1' || this.prodPalmeIndex == '0' ){
+        if (this.prodPalmeIndex == '1'){
           this.prodPalme = "../../assets/images/palm-oil.png"
           this.prodPalmeText = 'Contient de l\'huile de palme'
-        } else{
+        }else if(this.prodPalmeIndex == '0' ){
+          this.prodPalme = "../../assets/images/palm-oil-free.png"
+          this.prodPalmeText = 'Ne contient pas d\'huile de palme'
+        }
+        else{
           this.prodPalme = "../../assets/images/palm-oil-free.png"
           this.prodPalmeText = 'Ne contient pas d\'huile de palme'
         }
