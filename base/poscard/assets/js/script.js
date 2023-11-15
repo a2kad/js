@@ -59,21 +59,14 @@ function changeFont (font){
     let postCardTitle = document.getElementById('postCardTitile')
     let postCardText = document.getElementById('postCardText')
     if (font=='verdana'){
-        console.log('verdana')
-        // postCardTitle.style.fontFamily = "Verdana"
         postCardText.style.fontFamily = "Verdana"
     }else if (font=='Quattrocento'){
-        console.log('Quattrocento')
-        // postCardTitle.style.fontFamily = "Roboto"
         postCardText.style.fontFamily = "Quattrocento"
         postCardText.style.fontSize = "24px"
     }else if (font=='PinyonScript'){
-        console.log('PinyonScript')
-        // postCardTitle.style.fontFamily = "Arial"
         postCardText.style.fontFamily = "Pinyon Script"
         postCardText.style.fontSize = "36px"
     }
-    
 }
 inputVerdana.addEventListener('click', function(){
     let fontV = 'verdana'
@@ -89,13 +82,11 @@ inputPinyonScript.addEventListener('click', function(){
 })
 
 function changeColor(color){
-    console.log('ins'+color)
     postCardText.style.color = color
 }
 
 inputColor.addEventListener('change', function(){
     let color = inputColor.value
-    console.log(color)
     changeColor(color)
 })
 

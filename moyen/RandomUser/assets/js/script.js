@@ -24,8 +24,22 @@ function newPage() {
         })
 }
 
+function getWeather(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=le havre&appid=6af49a0f7d7a55d7451f325b2d6318c8&units=metric')
+    .then((reponse) => reponse.json())
+    .then(data =>{
+        console.log(data.name)
+    //     for(const result of data){
+    //     console.log(result)
+        
+    // }
+    })
+}
+
 newPage()
+getWeather()
 
 document.getElementById('reload').addEventListener('click', function () {
     newPage()
+    
 })
